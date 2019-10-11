@@ -1,0 +1,146 @@
+{
+  "id": "d737cf8a-9f5e-4d89-8c09-3360b774ad2b",
+  "version": "2.0",
+  "name": "calcula",
+  "url": "http://127.0.0.1",
+  "tests": [{
+    "id": "92e83fc8-9f3f-4aa6-b270-06cd7cc5c0dc",
+    "name": "calcular",
+    "commands": [{
+      "id": "4ea84a64-7246-47d0-8717-bd6955df6b77",
+      "comment": "",
+      "command": "open",
+      "target": "/calculadora.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10468b41-ce41-4a30-acbe-b81e472cc195",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x860",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8cca50f8-7e96-46d3-b9bc-735a0f7355f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=vlr1",
+      "targets": [
+        ["id=vlr1", "id"],
+        ["css=#vlr1", "css:finder"],
+        ["xpath=//input[@id='vlr1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11d40166-754c-4b59-a481-e5d309db3fa5",
+      "comment": "",
+      "command": "click",
+      "target": "id=vlr1",
+      "targets": [
+        ["id=vlr1", "id"],
+        ["css=#vlr1", "css:finder"],
+        ["xpath=//input[@id='vlr1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05fbb2c6-5d8d-4935-88e7-2a7edb1e2940",
+      "comment": "",
+      "command": "type",
+      "target": "id=vlr1",
+      "targets": [
+        ["id=vlr1", "id"],
+        ["css=#vlr1", "css:finder"],
+        ["xpath=//input[@id='vlr1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "63b36656-2073-4b7b-a520-cf53019fdb90",
+      "comment": "",
+      "command": "type",
+      "target": "id=vlr2",
+      "targets": [
+        ["id=vlr2", "id"],
+        ["css=#vlr2", "css:finder"],
+        ["xpath=//input[@id='vlr2']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "2ef78262-dad3-4c1f-b735-44ab3e88204a",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Calcula')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a98251e-084f-44f2-ae2f-e6394f5abe3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=resultadoCorreto",
+      "targets": [
+        ["id=resultadoCorreto", "id"],
+        ["css=#resultadoCorreto", "css:finder"],
+        ["xpath=//span[@id='resultadoCorreto']", "xpath:attributes"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'20')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f578048-f74d-4326-82c4-e7dbe240fa8d",
+      "comment": "10+10 é 20",
+      "command": "assertText",
+      "target": "id=resultadoCorreto",
+      "targets": [
+        ["id=resultadoCorreto", "id"],
+        ["css=#resultadoCorreto", "css:finder"],
+        ["xpath=//span[@id='resultadoCorreto']", "xpath:attributes"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'20')]", "xpath:innerText"]
+      ],
+      "value": "20"
+    }, {
+      "id": "4065ad27-b095-4d05-8d03-5c78f8491362",
+      "comment": "",
+      "command": "click",
+      "target": "id=resultadoErrado",
+      "targets": [
+        ["id=resultadoErrado", "id"],
+        ["css=#resultadoErrado", "css:finder"],
+        ["xpath=//span[@id='resultadoErrado']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'1010')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb9b3d88-30dc-4db4-a54e-3d74c108fddd",
+      "comment": "pq 10 + 10 é 20",
+      "command": "assertText",
+      "target": "id=resultadoErrado",
+      "targets": [
+        ["id=resultadoErrado", "id"],
+        ["css=#resultadoErrado", "css:finder"],
+        ["xpath=//span[@id='resultadoErrado']", "xpath:attributes"],
+        ["xpath=//span[contains(.,'1010')]", "xpath:innerText"]
+      ],
+      "value": "20"
+    }]
+  }],
+  "suites": [{
+    "id": "ce14d329-d1f8-434c-940d-18e7355cdb8c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["92e83fc8-9f3f-4aa6-b270-06cd7cc5c0dc"]
+  }],
+  "urls": ["http://127.0.0.1/"],
+  "plugins": []
+}
